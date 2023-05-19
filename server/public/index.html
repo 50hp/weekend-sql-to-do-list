@@ -7,6 +7,39 @@
     <script src="scripts/client.js" charset="utf-8"></script>
     <link rel="stylesheet" href="styles/style.css">
   </head>
+    
+    <header>
+        <h1>To DO List</h1>
 
+    </header>
+    
+
+    <div id="formContainer">
+            <h2>Add Task</h2>
+            <form id="inputForm">
+                <input type="text" id="inputOne" placeHolder"Task">
+                <input type="text" id="inputTwo" placeHolder"Notes">
+                <button type="submit" id="submitBtn">Submit</button>
+            </form>
+    </div>
+
+    <div id="tableContainer">
+        <h2>To Do ....</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                        <th>Time Created</th>
+                        <th>Time Completed</th>
+                        <th>Complete</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="taskView">
+                </tbody>
+            </table>
+    </div>
 
 </html>
