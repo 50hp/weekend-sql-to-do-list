@@ -78,14 +78,14 @@ function postTask(event) {
             console.log('request failed', err);
         });
 }
-//
-// function setStatus() {
-//
-//     $.ajax({
-//         method: 'PUT',
-//         url: '/list/' + ID,
-//         data: {
-//             status:
-//         }
-//     }).then((response) => {
-//         getList();
+
+function setStatus() {
+
+    $.ajax({
+        method: 'PUT',
+        url: '/list/' + ID,
+        data: {
+            status:
+        }
+    }).then((response) => {
+        getList();
