@@ -35,7 +35,8 @@ function renderToDom(array) {
     $('#taskView').empty();
 
     for (let item of array) {
-            let time;
+        
+        let time;
         if (item.timeCompleted === null ) {
              time = '';
         }else{
@@ -43,8 +44,6 @@ function renderToDom(array) {
         }
 
         let buttonToggle = ``;
-
-
         if (item.status) {
             buttonToggle = `<button class="markBtn" data-value="${item.status}">Mark Uncomplete</button>`
         } else {
@@ -52,10 +51,9 @@ function renderToDom(array) {
         }
 
 
-
         $('#taskView').append(`
                     
-                     <tr data-id="${item.id}">
+                    <tr id="${item.id}" data-id="${item.id}">
                         <td class="taskName">${item.task}</td>
                         <td class="taskStatus">${item.status}</td>
                         <td class="taskNotes">${item.notes}</td>
@@ -66,7 +64,11 @@ function renderToDom(array) {
                     </tr>
             `);
 
+        if (item.status === true) {
+            $(`#${item.id}`).css("background-color", "green");
         }
+
+     }
 }
 
 function postTask(event) {
