@@ -59,6 +59,21 @@ router.put('/:id', (req, res) => {
         }); 
 });
 
+router.delete('/:id', (req, res) => {
+    
+    let idToRemove = req.params.id;
+    let queryText = `DELETE FROM "list" WHERE "id"=$1;`;
+
+    pool.query(queryText, [idToRemove])
+        .then((result) => {
+            res.sendStatus(202);
+        }).catch((err) => {
+            console.log('database request err', err);
+            res.sendStatus(500);
+        });
+
+});
+
 module.exports = router;
 
 
