@@ -44,8 +44,8 @@ function renderToDom(array) {
                         <td class="taskName">${item.task}</td>
                         <td class="taskStatus">${item.status}</td>
                         <td class="taskNotes">${item.notes}</td>
-                        <td class="timeCompleted">${time}</td>
-                        <td class="timeCreated">${item.timeCreated}</td>
+                        <td class="timeCompleted">${item.timeCreated}</td>
+                        <td class="timeCreated">${time}</td>
                         <td class="markCompleted"><button class="markBtn">Mark Completed</button></td>
                         <td class="remove"><button class="removeBtn">Remove</button></td>
                     </tr>
