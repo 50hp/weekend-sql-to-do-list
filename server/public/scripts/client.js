@@ -7,6 +7,7 @@ function onReady() {
 
     $('#inputForm').on('submit', postTask);
     $('#taskView').on('click', '.markBtn', setStatus);
+    $('#taskView').on('click', '.removeBtn', deleteTask);
 
 
 }
@@ -121,7 +122,10 @@ function deleteTask() {
         url: '/list/' + ID,
     }).then((response) => {
         getList();
-
+    }).catch((err) => {
+        alert('request failed');
+        console.log('request falied', err);
+    });
 }
 
 
