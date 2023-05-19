@@ -9,11 +9,4 @@ const pool = new pg.Pool({
 });
 
 
-
-
-
-
-
-
-
-module.exprots = pool;
+module.exports = pool;
