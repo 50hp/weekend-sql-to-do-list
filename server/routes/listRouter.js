@@ -20,10 +20,22 @@ router.get('/', (req, res) => {
 
 });
 
+router.post('/', (req, res) => {
+    const newTask = req.body;
+    console.log(newTask);
 
+    const queryText =`
+    INSERT INTO "list" ("task", "notes")
+    VALUES ($1, $2);`;
 
+    pool.query(queryText, [newTask.task, newTask.notes])
+        .then((result) => {
+            res.sendStatus(201);
+        }).catch((err) => {
+            console.log('database err', err);
+        });
 
-
+});
 
 
 
