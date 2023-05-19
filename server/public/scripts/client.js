@@ -5,6 +5,8 @@ function onReady() {
 
     getList();
 
+    $('#inputForm').on('submit', postTask);
+
 
 
 }
@@ -28,7 +30,8 @@ function getList() {
 }
 
 function renderToDom(array) {
-
+    
+    $('#taskView').empty();
 
     for (let item of array) {
             let time;
@@ -51,8 +54,38 @@ function renderToDom(array) {
                     </tr>
             `);
 
-
-
         }
 }
 
+function postTask(event) {
+
+        event.preventDefault();
+    
+            let task = $('#inputOne').val();
+            let notes = $('#inputTwo').val();
+
+        $.ajax({
+            method: 'POST',
+            url: '/list',
+            data: {
+                task: task,
+                notes: notes,
+            }
+        }).then((response) => {
+            getList();
+        }).catch((err) => {
+            alert('request failed');
+            console.log('request failed', err);
+        });
+}
+//
+// function setStatus() {
+//
+//     $.ajax({
+//         method: 'PUT',
+//         url: '/list/' + ID,
+//         data: {
+//             status:
+//         }
+//     }).then((response) => {
+//         getList();
