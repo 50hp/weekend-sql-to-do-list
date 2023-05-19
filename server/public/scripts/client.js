@@ -7,6 +7,7 @@ function onReady() {
 
     $('#inputForm').on('submit', postTask);
     $('#taskView').on('click', '.markBtn', setStatus);
+    $('#taskView').on('click', '.removeBtn', deleteTask);
 
 
 }
@@ -84,6 +85,8 @@ function postTask(event) {
             }
         }).then((response) => {
             getList();
+            $('#inputOne').val('');
+            $('#inputTwo').val('');
         }).catch((err) => {
             alert('request failed');
             console.log('request failed', err);
@@ -109,3 +112,25 @@ function setStatus() {
         console.log('request failed', err);
     });
 }
+
+function deleteTask() {
+
+    let ID = $(this).closest('tr').data('id');
+    
+    $.ajax({
+        method: 'DELETE',
+        url: '/list/' + ID,
+    }).then((response) => {
+        getList();
+    }).catch((err) => {
+        alert('request failed');
+        console.log('request falied', err);
+    });
+}
+
+
+
+
+
+
+
