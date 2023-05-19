@@ -32,11 +32,35 @@ router.post('/', (req, res) => {
         .then((result) => {
             res.sendStatus(201);
         }).catch((err) => {
-            console.log('database err', err);
+            console.log('database request err', err);
+            res.sendStatus(500);
         });
 
 });
 
+router.put('/:id', (req, res) => {
+    let idToUpdate = req.params.id;
+    let status = req.body.status;
+    let queryText = ``;
+    console.log(status, idToUpdate)
 
+    if(status === 'true'){
+        queryText = `UPDATE "list" SET "status" = FALSE, "timeCompleted" = NULL WHERE "id"=$1;`;
+    }else{
+        queryText = `UPDATE "list" SET "status" = TRUE, "timeCompleted" = CURRENT_TIMESTAMP WHERE "id"=$1;`;
+    }
+
+    pool.query(queryText, [idToUpdate])
+        .then((result) => {
+            res.sendStatus(201);
+        }).catch((err) => {
+            console.log('database request err', err);
+            res.sendStatus(500);
+        }); 
+});
 
 module.exports = router;
+
+
+
+
