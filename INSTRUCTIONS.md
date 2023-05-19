@@ -93,5 +93,5 @@ your feature when you turn in your code.
     
 - `feature-time-completed` 
 
-    - [ ]  Add the ability to record when a task was completed. Show the
+    - [x]  Add the ability to record when a task was completed. Show the
       completed date on the frontend in a pretty format.
