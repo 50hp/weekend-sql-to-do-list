@@ -118,16 +118,34 @@ function setStatus() {
 function deleteTask() {
 
     let ID = $(this).closest('tr').data('id');
-    
-    $.ajax({
-        method: 'DELETE',
-        url: '/list/' + ID,
-    }).then((response) => {
-        getList();
-    }).catch((err) => {
-        alert('request failed');
-        console.log('request falied', err);
-    });
+
+    swal({
+        title: "Are you sure mate?",
+        text: "Once deleted, you will not be able to recover this item",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+        .then((willDelete) => {
+            if (willDelete) {
+                swal("Scadooosh, Item has been removed!", {
+                    icon: "success",
+                });
+
+                    $.ajax({
+                        method: 'DELETE',
+                        url: '/list/' + ID,
+                    }).then((response) => {
+                        getList();
+                    }).catch((err) => {
+                        alert('request failed');
+                        console.log('request falied', err);
+                    });
+
+            } else {
+                swal("You still have to complete this item.");
+            }
+        });
 }
 
 
