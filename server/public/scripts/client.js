@@ -8,11 +8,26 @@ function onReady() {
     $('#inputForm').on('submit', postTask);
     $('#taskView').on('click', '.markBtn', setStatus);
     $('#taskView').on('click', '.removeBtn', deleteTask);
-
+    $('#orderSwap').on('click', toggleOrder);
+    
+    orderToggle = 0;
 
 }
 
 let orderToggle = 0;
+
+function toggleOrder() {
+    
+        if (orderToggle === 0)  {
+            orderToggle = 1;
+            $('#orderSwap').text('|/');  
+        }else {
+            orderToggle = 0;
+            $('#orderSwap').text(` /|` );  
+        }
+    getList();
+}
+
 
 function getList() {
     
@@ -20,7 +35,7 @@ function getList() {
 
     $.ajax({
         method: 'get',
-        url: '/list',
+        url: '/list/' + orderToggle,
     }).then((response) => {
         renderToDom(response);
         console.log(response);

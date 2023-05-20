@@ -1,4 +1,11 @@
 
+button {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+
 
 table {
     border-collapse: collapse;
@@ -16,12 +23,6 @@ td {
   padding: 15px;
   text-align: left;
   border: 1px solid;
-}
-
-button {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid grey;
 }
 
 
