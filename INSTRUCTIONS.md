@@ -88,7 +88,7 @@ your feature when you turn in your code.
 
 - `feature-ordering-task-query` 
 
-    - [ ]  Research [Query Params](https://expressjs.com/en/api.html#req.query)
+    - [x]  Research [Query Params](https://expressjs.com/en/api.html#req.query)
       to have the request reverse the order of the returned todos. 
     
 - `feature-time-completed` 
