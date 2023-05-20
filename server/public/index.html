@@ -6,20 +6,24 @@
         <title>ToDo List</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
         <script src="venders/jquery-3.6.4.js" charset="utf-8"></script>
         <script src="venders/sweetalert.min.js"></script>
         <script src="scripts/client.js" charset="utf-8"></script>
         <link rel="stylesheet" href="styles/style.css">
+        <link href="styles/stars.png" href="styles/twinkling.png">
     </head>
-
-    <div class="container p-3 bg-light">
+ <div class="container p-1" id="twinkling">
+    <div class="container p-3">
         <div class="row">
         <h1>To DO List</h1>
         </div>
     </div>
 
-    <div class="row p-4">
-    <div class="col-sm-4 p-2" id="formContainer">
+    <div class="row">
+    <div class="container p-3 m-2" id="formContainer">
         <h2>Add Task</h2>
         <form id="inputForm">
             <input type="text" id="inputOne" placeHolder"Task">
@@ -27,11 +31,11 @@
             <button type="submit" id="submitBtn">Submit</button>
         </form>
     </div>
-
-    <div class="col-sm-8 p-2" id="listContainer">
-        <h2>To Do ....</h2>
-        <button id="orderSwap">/|</button>
-        <div class="container" id="tableContainer">
+    <div class="row">
+    <div class="container row m-1" id="listContainer">
+        <h2 class="col-1 p-2 m-2">To Do</h2>
+        <button id="orderSwap" class="col-1 p-3 m-2">/|</button>
+        <div class="col-7 p-3 m-1" id="tableContainer">
             <table>
                 <thead>
                     <tr>
@@ -50,4 +54,6 @@
         </div>
     </div>
     </div>
+    </div>
+ </div>
 </html>

@@ -1,31 +1,139 @@
 
 button {
-    background-color: white;
+    background: rgba(255,255,255,0.2);
     border-radius: 5px;
-    border: 1px solid grey;
+    border: 1px solid white;
+    color: white;
+
 }
 
-
+#listContainer {
+	animation-name: floating2;
+	animation-duration: 25s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+    background: rgba(0,255,255,0.5);
+    border-radius: 25px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 150;
+}
 
 table {
     border-collapse: collapse;
-    border: 1px solid grey;
+    border: 2px solid white;
 
 }
 
 th {
-  padding: 15px;
-  text-align: left;
-  border: 1px solid;
+    padding: 15px;
+    text-align: left;
+    border: 2px solid white;
 }
 
 td {
-  padding: 15px;
-  text-align: left;
-  border: 1px solid;
+    padding: 15px;
+    text-align: left;
+    border: 2px solid white;
+  
+}
+
+#formContainer {
+    background: rgba(0,255,255,0.5);
+	animation-name: floating;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-size-adjust: 10000%;
+    text-align: center;
+	animation-name: floating2;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+#inputOne {
+    background: rgba(255,255,255,0.4);
+    border-radius: 20px;
+
+}
+
+
+#inputTwo {
+    background: rgba(255,255,255,0.4);
+    border-radius: 20px;
+
 }
 
 
 
+
+
+
+
+
+
+
+
+
+/* feyframes */
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+#twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background:#000 url(stars.png) repeat top center;
+    z-index: 0;
+}
+
+#twinkling{
+    background:transparent url(twinkling.png) repeat top center;
+    z-index: 1;
+    animation:move-twink-back 200s linear infinite;
+}
+
+
+@keyframes floating {
+	0% { transform: translate(0, 0px); }
+	50% { transform: translate(0, 15px); }
+	100% { transform: translate(0, -0px); }
+}
+
+@keyframes floating2 {
+	100% { transform: translate(0, -0px); }
+	50% { transform: translate(0, 15px); }
+	0% { transform: translate(0, 0px); }
+}
 
 
