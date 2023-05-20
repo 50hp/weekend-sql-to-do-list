@@ -6,6 +6,8 @@ const pool = require('../modules/listPool.js');
 //route to get list data from database
 router.get('/', (req, res) => {
 
+    console.log(req.params);
+
     let queryText = `SELECT * FROM "list"
                      ORDER BY "timeCreated" ASC;`;
 
