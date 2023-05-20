@@ -12,13 +12,14 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
 
-    <header>
+    <div class="container p-3 bg-light">
+        <div class="row">
         <h1>To DO List</h1>
+        </div>
+    </div>
 
-    </header>
-
-
-    <div id="formContainer">
+    <div class="row p-4">
+    <div class="col-sm-4 p-2" id="formContainer">
         <h2>Add Task</h2>
         <form id="inputForm">
             <input type="text" id="inputOne" placeHolder"Task">
@@ -27,10 +28,10 @@
         </form>
     </div>
 
-    <div id="listContainer">
+    <div class="col-sm-8 p-2" id="listContainer">
         <h2>To Do ....</h2>
         <button id="orderSwap">/|</button>
-        <div id="tableContainer">
+        <div class="container" id="tableContainer">
             <table>
                 <thead>
                     <tr>
@@ -48,5 +49,5 @@
             </table>
         </div>
     </div>
-
+    </div>
 </html>
