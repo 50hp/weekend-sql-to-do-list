@@ -4,11 +4,19 @@ const pool = require('../modules/listPool.js');
 
 
 //route to get list data from database
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
+    
+    let orderToggle = req.params.id;
+    //console.log(req.params, orderToggle);
+    let queryText = '';
 
-    let queryText = `SELECT * FROM "list"
+    if ( orderToggle == 0 ) {
+        queryText = `SELECT * FROM "list"
                      ORDER BY "timeCreated" ASC;`;
-
+    }else {
+        queryText = `SELECT * FROM "list"
+                     ORDER BY "timeCreated" DESC;`;
+    }
     pool.query(queryText)
     .then((response) => {
         res.send(response.rows);
