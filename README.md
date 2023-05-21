@@ -17,6 +17,7 @@ Problem: Create a a To Do list that uses the full stack.
     Body Parser
     Jquery
     Bootstrap
+    Sweetalert
     PG
     PostgreSQL
 
