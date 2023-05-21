@@ -29,5 +29,5 @@ Problem: Create a a To Do list that uses the full stack.
 ## Screenshot
 -------------
 
-![screenshot](screenshot.png)
+![screenshot](Screenshot.png)
 
