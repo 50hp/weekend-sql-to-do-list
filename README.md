@@ -18,7 +18,7 @@ Problem: Create a a To Do list that uses the full stack.
     Jquery
     Bootstrap
     PG
-    PostgresSQL
+    PostgreSQL
 
 
 
