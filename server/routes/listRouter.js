@@ -28,6 +28,7 @@ router.get('/:id', (req, res) => {
 
 });
 
+//route to insert new items
 router.post('/', (req, res) => {
     const newTask = req.body;
     console.log(newTask);
@@ -46,6 +47,7 @@ router.post('/', (req, res) => {
 
 });
 
+route to update competion status
 router.put('/:id', (req, res) => {
     let idToUpdate = req.params.id;
     let status = req.body.status;
@@ -67,6 +69,7 @@ router.put('/:id', (req, res) => {
         }); 
 });
 
+route to remove a specified entry
 router.delete('/:id', (req, res) => {
     
     let idToRemove = req.params.id;
