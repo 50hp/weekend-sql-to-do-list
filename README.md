@@ -1,9 +1,33 @@
-# Project Name
+# Weekend Challenge: SQL To-Do List
+------------------------------------
+    
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
 ## Description
+---------------
 
-Your project description goes here. What problem did you solve? How did you solve it?
+Duration: Weekend Project
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Problem: Create a a To Do list that uses the full stack.
+
+
+
+## Built With
+--------------
+
+    Node JS
+    Express
+    Body Parser
+    Jquery
+    Bootstrap
+    PG
+    PostgresSQL
+
+
+
+
+## Screenshot
+-------------
+
+![screenshot](screenshot.png)
+
