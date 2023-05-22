@@ -27,4 +27,3 @@ else {
 
 module.exports = pool;
 
-module.exports = pool;
