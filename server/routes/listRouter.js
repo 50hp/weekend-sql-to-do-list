@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
 
 });
 
-route to update competion status
+//route to update competion status
 router.put('/:id', (req, res) => {
     let idToUpdate = req.params.id;
     let status = req.body.status;
@@ -69,7 +69,7 @@ router.put('/:id', (req, res) => {
         }); 
 });
 
-route to remove a specified entry
+//route to remove a specified entry
 router.delete('/:id', (req, res) => {
     
     let idToRemove = req.params.id;
